@@ -8,7 +8,8 @@ import MenuContainer from '../components/MenuContainer';
 import {MaterialCommunityIcons} from '@expo/vector-icons'
 import ItemCardContainer from '../components/ItemCardContainer';
 import { getPlacesData } from '../api/Index';
-
+const { GOOGLE_API } = require('../config');
+const googleApiKey = GOOGLE_API;
 const Discover = () => {
   const navigation = useNavigation();
 
@@ -71,7 +72,7 @@ const Discover = () => {
         setTr_lng(details?.geometry?.viewport?.northeast?.lng);
       }}
       query={{
-        key: 'AIzaSyDMNETtVXjg1A10GCIQ8zslNT33EY8zP0U',
+        key: googleApiKey,
         language: 'en',
       }}
     />

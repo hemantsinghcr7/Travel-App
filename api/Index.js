@@ -1,5 +1,7 @@
 import axios from "axios";
 
+const { API_RAPID } = require('../config');
+const apiRapidKey = API_RAPID;
 export const getPlacesData = async (bl_lat, bl_lng, tr_lat, tr_lng, type) => {
   try {
     const {
@@ -18,7 +20,7 @@ export const getPlacesData = async (bl_lat, bl_lng, tr_lat, tr_lng, type) => {
           lang: "en_US",
         },
         headers: {
-          "X-RapidAPI-Key": "47c5022016msh6dce9ed1f2c2ebep151d6ajsn11476cfbb5fa",
+          "X-RapidAPI-Key": apiRapidKey,
           "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com",
         },
       }
